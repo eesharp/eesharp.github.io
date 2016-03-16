@@ -8,7 +8,7 @@ What you need:
     >zero-to-slim.dev -> public folder called test.php with the following code:
   ```
       <?php
-      echo phpversion();
+        echo phpversion();
       ?>
   ```
 
