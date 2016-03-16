@@ -34,48 +34,66 @@ Once you are logged in, you will have a menu called **My Apps**. Click that and 
 In this tutorial we will be creating a web application. When prompted, choose the website option and create a name for your app. For the app category you can choose whatever you want.
 
  
+ 
 ![pic2](https://cloud.githubusercontent.com/assets/17342721/13798822/cd2fc4e8-eae7-11e5-8a19-29e86f43ad3e.png)
+ 
  
 
 Click **create App ID**. Once you have done that, click **My Apps** again and choose your app from the menu. You will be taken to a dashboard that shows you your app ID, version, and app secret (digital certificate). You will need these for later. For now, click on **settings** in the left menu bar.
 
 
+ 
 ![pic3](https://cloud.githubusercontent.com/assets/17342721/13798823/ce46fbd0-eae7-11e5-9f70-30919903c220.png)
 
+ 
 
 You should see this:
 
 
+ 
 ![pic4](https://cloud.githubusercontent.com/assets/17342721/13798826/cf79f23c-eae7-11e5-80a1-35809fd74113.png)
 
+ 
 
 Under ```App Domains```, type in the URL of your website and click **Add Platform**. Insert the same URL and click save changes.
 
 
+ 
 ![pic5](https://cloud.githubusercontent.com/assets/17342721/13798827/d0638a14-eae7-11e5-8752-4e6ee4b5c083.png)
 
+ 
 
 The next step is to download the PHP SDK that Facebook provides. To do this, follow the next steps to manually install SDK for PHP.
 
+
+ 
 ![pic6](https://cloud.githubusercontent.com/assets/17342721/13798828/d150a632-eae7-11e5-9c6d-075cf5861ed3.png)
+
+ 
 
 After you unzip the file, it should look like this:
 
 
+ 
 ![pic7](https://cloud.githubusercontent.com/assets/17342721/13798829/d2450718-eae7-11e5-981f-f640b41d69ff.png)
 
+ 
 
 In your ```zero-to-slim.dev/public``` folder, I would recommend that you create a ```fbtest``` file
 
 
+ 
 ![pic8](https://cloud.githubusercontent.com/assets/17342721/13798830/d384756e-eae7-11e5-9359-df6e6e823fe9.png)
 
+ 
 
 Then copy the ```src``` folder from the facebook file you downloaded and paste it into the ```fbtest``` file.
 
 
+ 
 ![pic9](https://cloud.githubusercontent.com/assets/17342721/13798831/d48e4228-eae7-11e5-8eea-12da63d97171.png)
 
+ 
 
 In the same fbtest file, create a file called ```index.php```. 
 As for the code that goes in this file, copy and paste the following into your index.php file:
