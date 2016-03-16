@@ -27,7 +27,7 @@ Once you are logged in, you will have a menu called **My Apps**. Click that and 
 
 
 INSERT PICTURE HERE
-![image1](/pic1.png)
+![pic1](/pic1.png)
 
 
 In this tutorial we will be creating a web application. When prompted, choose the website option and create a name for your app. For the app category you can choose whatever you want.
