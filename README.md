@@ -16,6 +16,3 @@ What you need:
       ```
       php -m
       ```
-    
-    
-      
