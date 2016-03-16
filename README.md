@@ -21,7 +21,9 @@ What you need:
   ```
 
 After you have met the basic requirements, you need to register your app with Facebook. To do this, go to ```developers.facebook.com```
-and log in. Once you are logged in, you will have a menu called My Apps. Click that and create a new app.
+and log in. 
+
+Once you are logged in, you will have a menu called **My Apps**. Click that and create a new app.
 
 
 INSERT PICTURE HERE
