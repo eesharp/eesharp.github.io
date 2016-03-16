@@ -26,14 +26,16 @@ and log in.
 Once you are logged in, you will have a menu called **My Apps**. Click that and create a new app.
 
 
+ 
 ![pic1](https://cloud.githubusercontent.com/assets/17342721/13798818/cb064408-eae7-11e5-8eb2-0575f2d1786d.png)
 
+ 
 
 In this tutorial we will be creating a web application. When prompted, choose the website option and create a name for your app. For the app category you can choose whatever you want.
 
-
+ 
 ![pic2](https://cloud.githubusercontent.com/assets/17342721/13798822/cd2fc4e8-eae7-11e5-8a19-29e86f43ad3e.png)
-
+ 
 
 Click **create App ID**. Once you have done that, click **My Apps** again and choose your app from the menu. You will be taken to a dashboard that shows you your app ID, version, and app secret (digital certificate). You will need these for later. For now, click on **settings** in the left menu bar.
 
