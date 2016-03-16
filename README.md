@@ -27,7 +27,7 @@ Once you are logged in, you will have a menu called **My Apps**. Click that and 
 
 
 INSERT PICTURE HERE
-![pic1](/Images/pic1.png)
+![pic1](https://cloud.githubusercontent.com/assets/17342721/13798818/cb064408-eae7-11e5-8eb2-0575f2d1786d.png)
 
 
 In this tutorial we will be creating a web application. When prompted, choose the website option and create a name for your app. For the app category you can choose whatever you want.
