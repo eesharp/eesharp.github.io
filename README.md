@@ -35,5 +35,24 @@ In this tutorial we will be creating a web application. When prompted, choose th
 INSERT PICTURE HERE
 
 
-Click **create App ID**. Once done with that, click on My Apps again, and then chose your app from the menu. You will be taken to a dashboard for your app that shows you your app id, version and your app secret. You will need these things later on. For now, click on settings in the left menu.
+Click **create App ID**. Once you have done that, click **My Apps** again and choose your app from the menu. You will be taken to a dashboard that shows you your app ID, version, and app secret (digital certificate). You will need these for later. For now, click on **settings** in the left menu bar.
 
+
+INSERT PICTURE HERE
+
+
+You should see this:
+
+
+INSERT PICTURE HERE
+
+
+Under ```App Domains```, type in the URL of your website and click **Add Platform**. Insert the same URL and click save changes.
+
+
+INSERT PICTURE HERE
+
+
+The next step is to download the PHP SDK that Facebook provides. To do this, go to the link posted below and click to manually install SDK for PHP.
+
+```https://developers.facebook.com/docs/php/gettingstarted                                                            ```
