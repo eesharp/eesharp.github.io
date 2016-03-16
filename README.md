@@ -68,19 +68,20 @@ Then include the autoloader provided in the SDK at the top of your script.
 After you unzip the file, it should look like this:
 
 
-INSERT PICTURE HERE
+![pic7]()
 
 
 In your ```zero-to-slim.dev/public``` folder, I would recommend that you create a ```fbtest``` file
 
 
-INSERT PICTURE HERE
+![pic8]()
 
 
 Then copy the ```src``` folder from the facebook file you downloaded and paste it into the ```fbtest``` file.
 
 
-INSERT PICTURE HERE
+![pic9]()
+
 
 In the same fbtest file, create a file called ```index.php```. 
 As for the code that goes in this file, copy and paste the following into your index.php file:
