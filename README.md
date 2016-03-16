@@ -29,16 +29,20 @@ and log in.
 Once you are logged in, you will have a menu called **My Apps**. Click that and create a new app.
 
 
+
  
 ![pic1](https://cloud.githubusercontent.com/assets/17342721/13798818/cb064408-eae7-11e5-8eb2-0575f2d1786d.png)
 
+ 
  
 
 In this tutorial we will be creating a web application. When prompted, choose the website option and create a name for your app. For the app category you can choose whatever you want.
 
  
  
+ 
 ![pic2](https://cloud.githubusercontent.com/assets/17342721/13798822/cd2fc4e8-eae7-11e5-8a19-29e86f43ad3e.png)
+ 
  
  
 
@@ -46,7 +50,9 @@ Click **create App ID**. Once you have done that, click **My Apps** again and ch
 
 
  
+ 
 ![pic3](https://cloud.githubusercontent.com/assets/17342721/13798823/ce46fbd0-eae7-11e5-9f70-30919903c220.png)
+
 
  
 
@@ -54,7 +60,9 @@ You should see this:
 
 
  
+ 
 ![pic4](https://cloud.githubusercontent.com/assets/17342721/13798826/cf79f23c-eae7-11e5-80a1-35809fd74113.png)
+
 
  
 
@@ -62,7 +70,9 @@ Under ```App Domains```, type in the URL of your website and click **Add Platfor
 
 
  
+ 
 ![pic5](https://cloud.githubusercontent.com/assets/17342721/13798827/d0638a14-eae7-11e5-8752-4e6ee4b5c083.png)
+
 
  
 
@@ -70,7 +80,9 @@ The next step is to download the PHP SDK that Facebook provides. To do this, fol
 
 
  
+ 
 ![pic6](https://cloud.githubusercontent.com/assets/17342721/13798828/d150a632-eae7-11e5-9c6d-075cf5861ed3.png)
+
 
  
 
@@ -78,7 +90,9 @@ After you unzip the file, it should look like this:
 
 
  
+ 
 ![pic7](https://cloud.githubusercontent.com/assets/17342721/13798829/d2450718-eae7-11e5-981f-f640b41d69ff.png)
+
 
  
 
@@ -86,7 +100,9 @@ In your ```zero-to-slim.dev/public``` folder, I would recommend that you create 
 
 
  
+ 
 ![pic8](https://cloud.githubusercontent.com/assets/17342721/13798830/d384756e-eae7-11e5-9359-df6e6e823fe9.png)
+
 
  
 
@@ -94,7 +110,9 @@ Then copy the ```src``` folder from the facebook file you downloaded and paste i
 
 
  
+ 
 ![pic9](https://cloud.githubusercontent.com/assets/17342721/13798831/d48e4228-eae7-11e5-8eea-12da63d97171.png)
+
 
  
 
