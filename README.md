@@ -11,7 +11,6 @@ What you need:
       <?php
         echo phpversion();
       ?>
-      
 ```
     >Save, and then go to zero-to-slim.dev/test.php and it will tell you what version you have
     
