@@ -20,6 +20,9 @@ What you need:
      php -m 
   ```
 
+ 
+  
+  
 After you have met the basic requirements, you need to register your app with Facebook. To do this, go to ```developers.facebook.com```
 and log in. 
 
