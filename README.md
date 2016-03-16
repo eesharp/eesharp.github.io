@@ -27,3 +27,13 @@ Once you are logged in, you will have a menu called **My Apps**. Click that and 
 
 
 INSERT PICTURE HERE
+
+
+In this tutorial we will be creating a web application. When prompted, choose the website option and create a name for your app. For the app category you can choose whatever you want.
+
+
+INSERT PICTURE HERE
+
+
+Click **create App ID**. Once done with that, click on My Apps again, and then chose your app from the menu. You will be taken to a dashboard for your app that shows you your app id, version and your app secret. You will need these things later on. For now, click on settings in the left menu.
+
