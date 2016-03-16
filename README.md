@@ -53,6 +53,163 @@ Under ```App Domains```, type in the URL of your website and click **Add Platfor
 INSERT PICTURE HERE
 
 
-The next step is to download the PHP SDK that Facebook provides. To do this, go to the link posted below and click to manually install SDK for PHP.
+The next step is to download the PHP SDK that Facebook provides. To do this, follow the next steps to manually install SDK for PHP.
+
+##Manually Installing SDK for PHP
+
+First, download the source code and unzip it wherever you like in your project.
+
+
+INSERT PICTURE HERE
+
+
+Then include the autoloader provided in the SDK at the top of your script.
+
+After you unzip the file, it should look like this:
+
+
+INSERT PICTURE HERE
+
+
+In your ```zero-to-slim.dev/public``` folder, I would recommend that you create a ```fbtest``` file
+
+
+INSERT PICTURE HERE
+
+
+Then copy the ```src``` folder from the facebook file you downloaded and paste it into the ```fbtest``` file.
+
+
+INSERT PICTURE HERE
+
+In the same fbtest file, create a file called ```index.php```. 
+As for the code that goes in this file, copy and paste the following into your index.php file:
+
+```
+<?php
+session_start();
+require_once __DIR__ . '/src/Facebook/autoload.php';
+
+$fb = new Facebook\Facebook([
+  'app_id' => 'APP_ID',
+  'app_secret' => 'APP_SECRET',
+  'default_graph_version' => 'v2.4',
+  ]);
+
+$helper = $fb->getRedirectLoginHelper();
+
+$permissions = ['email']; // optional
+	
+try {
+	if (isset($_SESSION['facebook_access_token'])) {
+		$accessToken = $_SESSION['facebook_access_token'];
+	} else {
+  		$accessToken = $helper->getAccessToken();
+	}
+} catch(Facebook\Exceptions\FacebookResponseException $e) {
+ 	// When Graph returns an error
+ 	echo 'Graph returned an error: ' . $e->getMessage();
+
+  	exit;
+} catch(Facebook\Exceptions\FacebookSDKException $e) {
+ 	// When validation fails or other local issues
+	echo 'Facebook SDK returned an error: ' . $e->getMessage();
+  	exit;
+ }
+
+if (isset($accessToken)) {
+	if (isset($_SESSION['facebook_access_token'])) {
+		$fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
+	} else {
+		// getting short-lived access token
+		$_SESSION['facebook_access_token'] = (string) $accessToken;
+
+	  	// OAuth 2.0 client handler
+		$oAuth2Client = $fb->getOAuth2Client();
+
+		// Exchanges a short-lived access token for a long-lived one
+		$longLivedAccessToken = $oAuth2Client->getLongLivedAccessToken($_SESSION['facebook_access_token']);
+
+		$_SESSION['facebook_access_token'] = (string) $longLivedAccessToken;
+
+		// setting default access token to be used in script
+		$fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
+	}
+
+	// redirect the user back to the same page if it has "code" GET variable
+	if (isset($_GET['code'])) {
+		header('Location: ./');
+	}
+
+	// getting basic info about user
+	try {
+		$profile_request = $fb->get('/me?fields=name,first_name,last_name,email');
+		$profile = $profile_request->getGraphNode()->asArray();
+	} catch(Facebook\Exceptions\FacebookResponseException $e) {
+		// When Graph returns an error
+		echo 'Graph returned an error: ' . $e->getMessage();
+		session_destroy();
+		// redirecting user back to app login page
+		header("Location: ./");
+		exit;
+	} catch(Facebook\Exceptions\FacebookSDKException $e) {
+		// When validation fails or other local issues
+		echo 'Facebook SDK returned an error: ' . $e->getMessage();
+		exit;
+	}
+	
+	// printing $profile array on the screen which holds the basic info about user
+	print_r($profile);
+
+  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
+} else {
+	// replace your website URL same as added in the developers.facebook.com/apps e.g. if you used http instead of https and you used non-www version or www version of your website then you must add the same here
+	$loginUrl = $helper->getLoginUrl('https://sohaibilyas.com/fbapp/', $permissions);
+	echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
+}
+```
+
+There are a couple of things you need to change in this file.
+>First, at the top you need to enter your **App ID**, **App Secret**, and change the version to **2.5**.
+
+```
+<?php
+	session_start();
+	require_once __DIR__ . '/src/Facebook/autoload.php';
+
+	$fb = new Facebook\Facebook([
+  	'app_id' => 'APP_ID',
+ 	'app_secret' => 'APP_SECRET',
+  	'default_graph_version' => 'v2.4',
+ 	 ]);
+```
+
+>Then, scroll down to the bottom. You will need to replace the url with your own website.
+
+>replace your website URL same as added in the ```developers.facebook.com/apps``` e.g. if you used ```http``` instead of ```https``` and you used ```non-www``` version or ```www version``` of your website, then you must add the same here:
+
+```
+$loginUrl = $helper->getLoginUrl('http://zero-to-slim.dev/fbtest/index.php', $permissions);
+    echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
+    }
+```
+
+Now there is one last thing to do. You need to add the following to the ```routes.php``` file in your ```zero-to-slim.dev``` directory so that ```/fbtest/``` will automatically redirect to ```/fbtest/index.php```.
+
+
+```
+$app->get('/fbtest/', function ($request, $response, $args){
+  $url = 'http://zero-to-slim.dev/fbtest/index.php';
+  header('Location: index.php');
+  exit();
+});
+```
+
+Go to ```http://zero-to-slim.dev/fbtest/index.php``` and you will see a link allowing you to log into Facebook.
+
+
+
 
 ```https://developers.facebook.com/docs/php/gettingstarted                                                            ```
+
+
