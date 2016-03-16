@@ -34,6 +34,7 @@ In this tutorial we will be creating a web application. When prompted, choose th
 
 
 INSERT PICTURE HERE
+![pic2](https://cloud.githubusercontent.com/assets/17342721/13798822/cd2fc4e8-eae7-11e5-8a19-29e86f43ad3e.png)
 
 
 Click **create App ID**. Once you have done that, click **My Apps** again and choose your app from the menu. You will be taken to a dashboard that shows you your app ID, version, and app secret (digital certificate). You will need these for later. For now, click on **settings** in the left menu bar.
