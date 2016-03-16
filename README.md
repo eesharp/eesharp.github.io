@@ -26,33 +26,31 @@ and log in.
 Once you are logged in, you will have a menu called **My Apps**. Click that and create a new app.
 
 
-INSERT PICTURE HERE
 ![pic1](https://cloud.githubusercontent.com/assets/17342721/13798818/cb064408-eae7-11e5-8eb2-0575f2d1786d.png)
 
 
 In this tutorial we will be creating a web application. When prompted, choose the website option and create a name for your app. For the app category you can choose whatever you want.
 
 
-INSERT PICTURE HERE
 ![pic2](https://cloud.githubusercontent.com/assets/17342721/13798822/cd2fc4e8-eae7-11e5-8a19-29e86f43ad3e.png)
 
 
 Click **create App ID**. Once you have done that, click **My Apps** again and choose your app from the menu. You will be taken to a dashboard that shows you your app ID, version, and app secret (digital certificate). You will need these for later. For now, click on **settings** in the left menu bar.
 
 
-INSERT PICTURE HERE
+![pic3]()
 
 
 You should see this:
 
 
-INSERT PICTURE HERE
+![pic4]()
 
 
 Under ```App Domains```, type in the URL of your website and click **Add Platform**. Insert the same URL and click save changes.
 
 
-INSERT PICTURE HERE
+![pic5]()
 
 
 The next step is to download the PHP SDK that Facebook provides. To do this, follow the next steps to manually install SDK for PHP.
@@ -62,7 +60,7 @@ The next step is to download the PHP SDK that Facebook provides. To do this, fol
 First, download the source code and unzip it wherever you like in your project.
 
 
-INSERT PICTURE HERE
+![pic6]()
 
 
 Then include the autoloader provided in the SDK at the top of your script.
